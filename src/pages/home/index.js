@@ -24,7 +24,12 @@ import Logotipo from '../../images/logotipo.png';
 
 import PainelHour from '../../components/PanelHour';
 import Input from '../../components/Input';
+import ItemCategory from '../../components/ItemCategory';
+import FlatListCategory from '../../components/FlatListCategory';
+
+
 export default function Home() {
+
   return (
     <Wrapper>
       <Profile>
@@ -44,6 +49,7 @@ export default function Home() {
 
       <PainelHour/>
       <Input/>
+      <FlatListCategory/>
     </Wrapper>
   );
 }
