@@ -1,5 +1,10 @@
 import styled from 'styled-components/native';
-import { Feather } from '@expo/vector-icons'; 
+import { FlatList } from 'react-native';
 
 export const Container = styled.View`
+   height: 40px;
+`;
+export const List = styled(FlatList).attrs({
+   showsHorizontalScrollIndicator:false
+})`
 `;

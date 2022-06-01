@@ -26,7 +26,8 @@ import PainelHour from '../../components/PanelHour';
 import Input from '../../components/Input';
 import ItemCategory from '../../components/ItemCategory';
 import FlatListCategory from '../../components/FlatListCategory';
-
+import ItemMenu from '../../components/ItemMenu';
+import FlatListMenu from '../../components/FlatListMenu';
 
 export default function Home() {
 
@@ -50,6 +51,8 @@ export default function Home() {
       <PainelHour/>
       <Input/>
       <FlatListCategory/>
+
+      <FlatListMenu/>
     </Wrapper>
   );
 }

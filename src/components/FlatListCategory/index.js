@@ -1,7 +1,7 @@
-import react from 'react'
-import { FlatList } from 'react-native';
+import react, {useState} from 'react'
+import {Alert} from 'react-native'
 import ItemCategory from '../ItemCategory';
-import { Container } from './styles';
+import { Container,List } from './styles';
 
 const DATA = [
    {
@@ -32,12 +32,18 @@ const DATA = [
 
  
 export default function FlatListCategory(){
+  const[element,setElement]=useState(DATA[0])
+   function selectItem(item){
+     setElement(item)
+   }
    return(
-      <Container>   
-         <FlatList horizontal data={DATA} 
-           showsHorizontalScrollIndicator={false}
-            renderItem={({item})=>  <ItemCategory title={item.title} /> } 
-            keyExtractor={item => item.id} />
-      </Container>
+      <Container> 
+        <List horizontal data={DATA} 
+            renderItem={({item})=>  
+            <ItemCategory   
+            selected={ item.id === element.id }
+            title={item.title} onPress={()=>selectItem(item)}/>  } 
+            keyExtractor={item => item.id} /> 
+      </Container> 
    )
 }
